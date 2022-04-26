@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Error reported</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Reporter</th>
+    <th>Manufacturer</th>
+    <th>Serial number</th>
+    <th>Description</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="report : ${reports}">
+    <td th:text="${report.id}"></td>
+    <td th:text="${report.reporter}"></td>
+    <td th:text="${report.manufacturer}"></td>
+    <td th:text="${report.serialNumber}"></td>
+    <td th:text="${report.description}"></td>
+    <td th:text="${report.creation_date}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
